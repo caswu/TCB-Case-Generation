@@ -1,0 +1,21 @@
+minimum_cumulusci_version: '3.65.0'
+project:
+    name: TCB_validation
+    package:
+        name: TCB_validation_package
+        api_version: '55.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/TCB_validation/tests
+            options:
+                outputdir: robot/TCB_validation/results
+
+    robot_testdoc:
+        options:
+            path: robot/TCB_validation/tests
+            output: robot/TCB_validation/doc/TCB_validation_tests.html
+
